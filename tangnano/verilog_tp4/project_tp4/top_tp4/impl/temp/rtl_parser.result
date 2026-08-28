@@ -1,0 +1,126 @@
+[
+ {
+  "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+  "InstLine" : 21,
+  "InstName" : "top_tp4",
+  "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+  "ModuleLine" : 21,
+  "ModuleName" : "top_tp4",
+  "SubInsts" : [
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 87,
+    "InstName" : "fsm_inst",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/fsm_monitor_movimento_tp4.v",
+    "ModuleLine" : 19,
+    "ModuleName" : "fsm_monitor_movimento_tp4"
+   },
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 188,
+    "InstName" : "sccb_inst",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/sccb_master_tp4.v",
+    "ModuleLine" : 16,
+    "ModuleName" : "sccb_master_tp4"
+   },
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 214,
+    "InstName" : "cam_inst",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/camera_ov7670_capture_tp4.v",
+    "ModuleLine" : 17,
+    "ModuleName" : "camera_ov7670_capture_tp4"
+   },
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 260,
+    "InstName" : "suavizador_inst",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/unidade_aritmetica_tp4.v",
+    "ModuleLine" : 13,
+    "ModuleName" : "unidade_aritmetica_tp4",
+    "SubInsts" : [
+     {
+      "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/unidade_aritmetica_tp4.v",
+      "InstLine" : 30,
+      "InstName" : "mac_a",
+      "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/dsp_mac_tp4.v",
+      "ModuleLine" : 27,
+      "ModuleName" : "dsp_mac_tp4"
+     },
+     {
+      "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/unidade_aritmetica_tp4.v",
+      "InstLine" : 35,
+      "InstName" : "mac_b",
+      "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/dsp_mac_tp4.v",
+      "ModuleLine" : 27,
+      "ModuleName" : "dsp_mac_tp4"
+     },
+     {
+      "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/unidade_aritmetica_tp4.v",
+      "InstLine" : 40,
+      "InstName" : "mac_c",
+      "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/dsp_mac_tp4.v",
+      "ModuleLine" : 27,
+      "ModuleName" : "dsp_mac_tp4"
+     }
+    ]
+   },
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 306,
+    "InstName" : "buffer_media",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/bram_frame_buffer_tp4.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "bram_frame_buffer_tp4"
+   },
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 341,
+    "InstName" : "buffer_atual",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/bram_frame_buffer_tp4.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "bram_frame_buffer_tp4"
+   },
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 347,
+    "InstName" : "buffer_referencia",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/bram_frame_buffer_tp4.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "bram_frame_buffer_tp4"
+   },
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 357,
+    "InstName" : "diff_inst",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/frame_diff_tp4.v",
+    "ModuleLine" : 16,
+    "ModuleName" : "frame_diff_tp4"
+   },
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 405,
+    "InstName" : "classificador",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/classificador_movimento_cfg.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "classificador_movimento_cfg"
+   },
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 412,
+    "InstName" : "conversor_leds",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/estado_para_leds.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "estado_para_leds"
+   },
+   {
+    "InstFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/top_tp4.v",
+    "InstLine" : 430,
+    "InstName" : "telemetria_serial",
+    "ModuleFile" : "/home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/src/serial_out_tp4.v",
+    "ModuleLine" : 26,
+    "ModuleName" : "serial_out_tp4"
+   }
+  ]
+ }
+]

@@ -1,0 +1,80 @@
+//
+// clock (oscilador interno de 27 MHz da Tang Nano 20K)
+//
+IO_LOC  "clk27m" 4;
+IO_PORT "clk27m" IO_TYPE=LVCMOS33;
+
+//
+// pclk -- clock global do sistema, vindo da propria saida PCLK da camera
+// (nao confundir com clk27m, que so alimenta o XCLK da camera)
+//
+IO_LOC  "pclk" 71;
+IO_PORT "pclk" IO_TYPE=LVCMOS33;
+
+//
+// reset -- botao fisico S2 da Tang Nano (ativo-baixo, invertido no RTL)
+//
+IO_LOC  "rst_btn_n" 49;
+IO_PORT "rst_btn_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+//
+// chave DIP para arm_start (fio para 3V3 = liga; aberto = 0 via pull-down)
+//
+IO_LOC  "arm_start" 79;
+IO_PORT "arm_start" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+//
+// LEDs onboard (ja invertidos no RTL para o acionamento ativo-baixo real)
+//
+IO_LOC  "led_normal" 15;
+IO_PORT "led_normal" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "led_atencao" 16;
+IO_PORT "led_atencao" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "led_alerta" 17;
+IO_PORT "led_alerta" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+//
+// camera OV7670 (modulo externo via fios femea-femea)
+//
+IO_LOC  "cam_xclk" 48;
+IO_PORT "cam_xclk" IO_TYPE=LVCMOS33;
+IO_LOC  "cam_vsync" 41;
+IO_PORT "cam_vsync" IO_TYPE=LVCMOS33;
+IO_LOC  "cam_href" 76;
+IO_PORT "cam_href" IO_TYPE=LVCMOS33;
+IO_LOC  "cam_sioc" 86;
+IO_PORT "cam_sioc" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "cam_siod" 51;
+IO_PORT "cam_siod" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "cam_pixel_data[7]" 27;
+IO_LOC  "cam_pixel_data[6]" 28;
+IO_LOC  "cam_pixel_data[5]" 25;
+IO_LOC  "cam_pixel_data[4]" 26;
+IO_LOC  "cam_pixel_data[3]" 29;
+IO_LOC  "cam_pixel_data[2]" 30;
+IO_LOC  "cam_pixel_data[1]" 31;
+IO_LOC  "cam_pixel_data[0]" 42;
+IO_PORT "cam_pixel_data[7]" IO_TYPE=LVCMOS33;
+IO_PORT "cam_pixel_data[6]" IO_TYPE=LVCMOS33;
+IO_PORT "cam_pixel_data[5]" IO_TYPE=LVCMOS33;
+IO_PORT "cam_pixel_data[4]" IO_TYPE=LVCMOS33;
+IO_PORT "cam_pixel_data[3]" IO_TYPE=LVCMOS33;
+IO_PORT "cam_pixel_data[2]" IO_TYPE=LVCMOS33;
+IO_PORT "cam_pixel_data[1]" IO_TYPE=LVCMOS33;
+IO_PORT "cam_pixel_data[0]" IO_TYPE=LVCMOS33;
+
+//
+// telemetria serial p/ Raspberry Pi -- pino reservado, mas AINDA SEM FIACAO
+// fisica (isso fica para o capitulo final, com o Raspberry Pi conectado)
+//
+IO_LOC  "serial_clk_ext" 85;
+IO_PORT "serial_clk_ext" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_LOC  "serial_data" 77;
+IO_PORT "serial_data" IO_TYPE=LVCMOS33;
+IO_LOC  "fpga_pronto_pin" 74;
+IO_PORT "fpga_pronto_pin" IO_TYPE=LVCMOS33;
+IO_LOC  "dbg_fsm_b1" 73;
+IO_PORT "dbg_fsm_b1" IO_TYPE=LVCMOS33;
+IO_LOC  "dbg_fsm_b0" 75;
+IO_PORT "dbg_fsm_b0" IO_TYPE=LVCMOS33;
+

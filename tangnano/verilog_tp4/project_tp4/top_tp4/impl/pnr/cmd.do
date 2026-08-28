@@ -1,0 +1,17 @@
+-d /home/leonardo-moraes/projeto_bloco/TP4/tangnano/verilog_tp4/project_tp4/top_tp4/impl/gwsynthesis/top_tp4.vg
+-p GW2AR-18C-QFN88-8
+-pn GW2AR-LV18QN88C8/I7
+-cst /home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/project_tp4/top_tp4/src/top_tp4.cst
+-cfg /home/leonardo-moraes/projeto_bloco/TP4/tangnano/verilog_tp4/project_tp4/top_tp4/impl/pnr/device.cfg
+-sdc /home/leonardo-moraes/projeto_bloco/TP4/verilog_tp4/project_tp4/top_tp4/src/top_tp4.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-place_option 0
+-route_option 0
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000

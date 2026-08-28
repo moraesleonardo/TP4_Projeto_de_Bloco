@@ -1,0 +1,132 @@
+===== heranca_tp2 =====
+OK    [T7-1] nivel=10 estado=0
+OK    [T7-2] nivel=50 estado=0
+OK    [T7-3] nivel=51 estado=1
+OK    [T7-4] nivel=80 estado=1
+OK    [T7-5] nivel=120 estado=1
+OK    [T7-6] nivel=121 estado=2
+OK    [T7-7] nivel=180 estado=2
+OK    [T7-8] nivel=255 estado=2
+OK    [LED] estado=00 -> led_normal=1 led_atencao=0 led_alerta=0
+OK    [LED] estado=01 -> led_normal=0 led_atencao=1 led_alerta=0
+OK    [LED] estado=10 -> led_normal=0 led_atencao=0 led_alerta=1
+OK    [LED] estado=11 -> led_normal=0 led_atencao=0 led_alerta=0
+RESULTADO: TODOS OS TESTES DE HERANCA TP2 PASSARAM
+tb/heranca_tp2_tb.v:77: $finish called at 12000 (1ps)
+===== dsp_mac =====
+OK    [MAC-1 (10*85+0)] 10*85+0 = 850
+OK    [C-2 (255*85+850)] 255*85+850 = 22525
+OK    [MAC-3 (0*85+100)] 0*85+100 = 100
+OK    [RESET] acumulador e valid_out zerados
+RESULTADO: TODOS OS TESTES DO DSP MAC PASSARAM
+tb/dsp_mac_tp4_tb.v:55: $finish called at 47000 (1ps)
+===== unidade_aritmetica =====
+OK    [AR-1 (constante)] a=10 b=10 c=10 -> suavizada=9
+OK    [2 (pico isolado)] a=0 b=255 c=0 -> suavizada=84
+OK    [AR-3 (saturacao)] a=255 b=255 c=255 -> suavizada=254
+OK    [AR-4 (rampa)] a=50 b=60 c=70 -> suavizada=59
+OK    [AR-5 (zero)] a=0 b=0 c=0 -> suavizada=0
+RESULTADO: TODOS OS TESTES DA UNIDADE ARITMETICA PASSARAM
+tb/unidade_aritmetica_tp4_tb.v:66: $finish called at 176000 (1ps)
+===== bram =====
+OK    [BRAM-1] endereco=0 -> 10
+OK    [BRAM-2] endereco=1 -> 45
+OK    [BRAM-3] endereco=2 -> 60
+OK    [BRAM-4] endereco=3 -> 200
+OK    [BRAM-5] endereco=7 -> 255
+OK    [BRAM-6] endereco=63 -> 1
+OK    [ito, deve ser 0)] endereco=4 -> 0
+OK    [-8 (sobrescrita)] endereco=0 -> 77
+RESULTADO: TODOS OS TESTES DA BRAM PASSARAM
+tb/bram_frame_buffer_tp4_tb.v:68: $finish called at 296000 (1ps)
+===== sccb =====
+OK    [B-1 (reset COM7)] id=42 reg=12 dado=80 transmitidos corretamente
+OK    [-2 (formato YUV)] id=42 reg=12 dado=04 transmitidos corretamente
+OK    [os os bits em 1)] id=42 reg=42 dado=ff transmitidos corretamente
+OK    [os os bits em 0)] id=42 reg=00 dado=00 transmitidos corretamente
+RESULTADO: TODOS OS TESTES DO MESTRE SCCB PASSARAM
+tb/sccb_master_tp4_tb.v:81: $finish called at 7016000 (1ps)
+===== camera =====
+OK    [CAM-BUF] endereco=0 luma=10 (croma descartada)
+OK    [CAM-BUF] endereco=1 luma=20 (croma descartada)
+OK    [CAM-BUF] endereco=2 luma=30 (croma descartada)
+OK    [CAM-BUF] endereco=3 luma=40 (croma descartada)
+OK    [CAM-BUF] endereco=4 luma=50 (croma descartada)
+OK    [CAM-BUF] endereco=5 luma=60 (croma descartada)
+OK    [CAM-BUF] endereco=6 luma=70 (croma descartada)
+OK    [CAM-BUF] endereco=7 luma=80 (croma descartada)
+OK    [CAM-FRAME] frame_pronto pulsou exatamente 1 vez ao concluir o frame reduzido
+RESULTADO: TODOS OS TESTES DO CAPTURADOR DE CAMERA PASSARAM
+tb/camera_ov7670_capture_tp4_tb.v:103: $finish called at 216000 (1ps)
+===== frame_diff =====
+OK    [rames identicos)] soma=0 nivel_movimento=0
+OK    [eradas, soma=20)] soma=20 nivel_movimento=20
+OK    [el saturado=255)] soma=2040 nivel_movimento=255
+OK    [s FD-3, soma=40)] soma=40 nivel_movimento=40
+RESULTADO: TODOS OS TESTES DO FRAME_DIFF PASSARAM
+tb/frame_diff_tp4_tb.v:91: $finish called at 816000 (1ps)
+===== fsm =====
+OK    [F1-reset] estado=0
+OK    [F1-sccb_iniciar] pulso de disparo presente em CONFIG
+OK    [F2-sccb_iniciar] nao reenvia o disparo (apenas 1 pulso)
+OK    [F2-ainda-config] estado=0
+OK    [-pos-sccb-pronto] estado=1
+OK    [F4-sem-start] estado=1
+OK    [F5-apos-start] estado=2
+OK    [aguardando-frame] estado=2
+OK    [pos-frame-pronto] estado=3
+OK    [F7-diff_iniciar] em nivel alto durante COMPARA
+OK    [apos-diff-pronto] estado=4
+OK    [F9-exibe-1] estado=4
+OK    [F10-exibe-2] estado=4
+OK    [F11-exibe-3] estado=4
+OK    [aptura (start=1)] estado=2
+OK    [vo-ciclo-compara] estado=3
+OK    [novo-ciclo-exibe] estado=4
+OK    [F15-exibe-ainda] estado=4
+OK    [F16-exibe-ainda2] estado=4
+OK    [espera (start=0)] estado=1
+RESULTADO: TODOS OS TESTES DA FSM TP4 PASSARAM
+tb/fsm_monitor_movimento_tp4_tb.v:114: $finish called at 236000 (1ps)
+===== serial_out =====
+OK    [ado=2,nivel=200)] valor=1011001000 (712) reconstruido corretamente via serial
+OK    [SER-2 (zero)] valor=0000000000 (0) reconstruido corretamente via serial
+OK    [os os bits em 1)] valor=1111111111 (1023) reconstruido corretamente via serial
+OK    [adrao alternado)] valor=0101010101 (341) reconstruido corretamente via serial
+RESULTADO: TODOS OS TESTES DO SERIAL_OUT PASSARAM
+tb/serial_out_tp4_tb.v:70: $finish called at 1936000 (1ps)
+===== top_integracao =====
+OK    [INT-1] FSM em ESPERA apos configuracao SCCB concluida
+OK    [INT-2] FSM avancou para CAPTURA apos arm_start (comunicacao fisica ARM->FPGA)
+OK    [INT-3] nivel_movimento=0 no 1o frame (identico ao fundo capturado, lido via serial)
+OK    [INT-4] estado classificado = Normal (telemetria serial FPGA->ARM)
+OK    [INT-5] led_normal aceso (fisico ativo-baixo)
+OK    [INT-6] nivel_movimento=255 apos o 2o frame (movimento detectado, lido via serial)
+OK    [INT-7] estado classificado = Alerta (movimento significativo detectado)
+OK    [INT-8] led_alerta aceso (fisico ativo-baixo)
+RESULTADO: TODOS OS TESTES DE INTEGRACAO (TOP_TP4 / PIPELINE COMPLETO DO MVP, TELEMETRIA SERIAL) PASSARAM
+tb/top_tp4_tb.v:164: $finish called at 10756000 (1ps)
+
+############################################
+RESUMO FINAL
+############################################
+===== heranca_tp2 =====
+RESULTADO: TODOS OS TESTES DE HERANCA TP2 PASSARAM
+===== dsp_mac =====
+RESULTADO: TODOS OS TESTES DO DSP MAC PASSARAM
+===== unidade_aritmetica =====
+RESULTADO: TODOS OS TESTES DA UNIDADE ARITMETICA PASSARAM
+===== bram =====
+RESULTADO: TODOS OS TESTES DA BRAM PASSARAM
+===== sccb =====
+RESULTADO: TODOS OS TESTES DO MESTRE SCCB PASSARAM
+===== camera =====
+RESULTADO: TODOS OS TESTES DO CAPTURADOR DE CAMERA PASSARAM
+===== frame_diff =====
+RESULTADO: TODOS OS TESTES DO FRAME_DIFF PASSARAM
+===== fsm =====
+RESULTADO: TODOS OS TESTES DA FSM TP4 PASSARAM
+===== serial_out =====
+RESULTADO: TODOS OS TESTES DO SERIAL_OUT PASSARAM
+===== top_integracao =====
+RESULTADO: TODOS OS TESTES DE INTEGRACAO (TOP_TP4 / PIPELINE COMPLETO DO MVP, TELEMETRIA SERIAL) PASSARAM
